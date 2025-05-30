@@ -24,3 +24,7 @@ jobs:
                 go mod download
                 go build -o product-catalog-service
 
+            - name: test
+              run: |
+                cd ./src/productcatalogservice
+                go test ./...
