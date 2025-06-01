@@ -87,7 +87,7 @@ Verify that the deployments are running.
 kubectl get deployment -n kube-system aws-load-balancer-controller
 ```
 
-You might face the issue, unable to see the loadbalancer address while giving k get ing -n robot-shop at the end. To avoid this your **AWSLoadBalancerControllerIAMPolicy** should have the required permissions for elasticloadbalancing:DescribeListenerAttributes.
+You might face the issue, unable to see the loadbalancer address. To avoid this your **AWSLoadBalancerControllerIAMPolicy** should have the required permissions for elasticloadbalancing:DescribeListenerAttributes.
 
 ## Run the following command to retrieve the policy details and look for **elasticloadbalancing:DescribeListenerAttributes** in the policy document.
 
