@@ -4,10 +4,14 @@ https://docs.aws.amazon.com/eks/latest/userguide/lbc-helm.html
 
 ## Setup OIDC Connector
 
-#### commands to configure IAM OIDC provider
+Ensure eksctl is installed. [eksctl](https://eksctl.io/installation/)
+
+Retrieve your cluster’s OIDC issuer ID and store it in a variable. Replace <my-cluster> with your own value.
+
+Create OIDC provider (eksctl)
 
 ```
-export cluster_name=demo-cluster
+export cluster_name=<my-cluster>
 ```
 
 ```
@@ -30,7 +34,7 @@ eksctl utils associate-iam-oidc-provider --cluster $cluster_name --approve
 curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.13.0/docs/install/iam_policy.json
 ```
 
-Create IAM Policy
+## Create IAM Policy
 
 ```
 aws iam create-policy \
@@ -38,7 +42,7 @@ aws iam create-policy \
     --policy-document file://iam_policy.json
 ```
 
-Create IAM Role
+## Create IAM Role
 
 ```
 eksctl create iamserviceaccount \
