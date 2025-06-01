@@ -4,7 +4,8 @@ https://docs.aws.amazon.com/eks/latest/userguide/lbc-helm.html
 
 ## Setup OIDC Connector
 
-Ensure eksctl is installed. [eksctl](https://eksctl.io/installation/)
+Ensure eksctl is installed. 
+[eksctl installation](https://eksctl.io/installation/)
 
 Retrieve your cluster’s OIDC issuer ID and store it in a variable. Replace <my-cluster> with your own value.
 
