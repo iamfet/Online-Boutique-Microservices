@@ -79,10 +79,10 @@ Update the values as needed for your environment.
 
 ## AWS Load Balancer Controller
 
-## AWS Load Balancer Controller
-
 To enable Kubernetes Ingress resources with AWS Application Load Balancer, install the AWS Load Balancer Controller in your EKS cluster.  
-See [Install AWS Load Balancer Controller.md](./Install%20AWS%20Load%20Balancer%20Controller.md) for step-by-step instructions in this repository.
+See [Install_AWS_Load_Balancer_ Controller](./Install_AWS_Load_Balancer_Controller.md) for step-by-step instructions in this repository.
+
+Install_AWS_Load_Balancer_Controller
 
 ---
 
