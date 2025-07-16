@@ -82,8 +82,6 @@ Update the values as needed for your environment.
 To enable Kubernetes Ingress resources with AWS Application Load Balancer, install the AWS Load Balancer Controller in your EKS cluster.  
 See [Install_AWS_Load_Balancer_ Controller](./Install_AWS_Load_Balancer_Controller.md) for step-by-step instructions in this repository.
 
-Install_AWS_Load_Balancer_Controller
-
 ---
 
 ## ArgoCD Installation
@@ -98,7 +96,7 @@ kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
 # (Optional) Expose the ArgoCD API server (for local access)
-kubectl port-forward svc/argocd-server -n argocd 8080:443
+kubectl port-forward pod/<argocd-server-pod> -n argocd 8080:8080
 ```
 
 **Access the ArgoCD UI:**
