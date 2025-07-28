@@ -9,13 +9,25 @@ This project is based on [GoogleCloudPlatform/microservices-demo](https://github
 ```
 .
 ├── src/                  # Application source code for each microservice
-├── infra/                # Infrastructure as Code (Terraform modules, etc.)
-│   └── modules/
+├── infra/                # Infrastructure as Code (Terraform)
+│   ├── modules/
+│   │   ├── eks/          # EKS cluster module
+│   │   └── vpc/          # VPC networking module
+│   ├── s3_backend/       # S3 backend configuration
+│   ├── main.tf           # Main Terraform configuration
+│   ├── variables.tf      # Variable definitions
+│   ├── outputs.tf        # Output definitions
+│   └── providers.tf      # Provider configurations
 ├── kubernetes/           # Kubernetes deployment manifests
+│   ├── frontend/
+│   │   └── deploy.yaml
+│   ├── [service-name]/
+│   │   └── deploy.yaml
+│   └── k8s-config.yaml
 ├── .github/workflows/    # GitHub Actions CI/CD workflows
 ├── README.md             # Project documentation
-├── Install AWS Load Balancer Controller.md # Guide for installing AWS Load Balancer Controller
-└── ...
+├── Install_AWS_Load_Balancer_Controller.md
+└── LICENSE
 ```
 
 ## Features
